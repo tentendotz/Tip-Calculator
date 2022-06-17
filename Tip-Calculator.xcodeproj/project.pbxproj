@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06601B8F285D12730015A246 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06601B8E285D12730015A246 /* ResultsViewController.swift */; };
 		069BF7A2285BB1B800A36200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069BF7A1285BB1B800A36200 /* AppDelegate.swift */; };
 		069BF7A4285BB1B800A36200 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069BF7A3285BB1B800A36200 /* SceneDelegate.swift */; };
 		069BF7A6285BB1B800A36200 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069BF7A5285BB1B800A36200 /* CalculatorViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06601B8E285D12730015A246 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		069BF79E285BB1B800A36200 /* Tip-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		069BF7A1285BB1B800A36200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		069BF7A3285BB1B800A36200 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				069BF7A1285BB1B800A36200 /* AppDelegate.swift */,
 				069BF7A3285BB1B800A36200 /* SceneDelegate.swift */,
 				069BF7A5285BB1B800A36200 /* CalculatorViewController.swift */,
+				06601B8E285D12730015A246 /* ResultsViewController.swift */,
 				069BF7A7285BB1B800A36200 /* Main.storyboard */,
 				069BF7AA285BB1BA00A36200 /* Assets.xcassets */,
 				069BF7AC285BB1BA00A36200 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				069BF7A6285BB1B800A36200 /* CalculatorViewController.swift in Sources */,
 				069BF7A2285BB1B800A36200 /* AppDelegate.swift in Sources */,
 				069BF7A4285BB1B800A36200 /* SceneDelegate.swift in Sources */,
+				06601B8F285D12730015A246 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
