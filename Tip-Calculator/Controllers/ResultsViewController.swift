@@ -18,14 +18,14 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         totalLabel.text = result
         settingsLabel.text = "Split between \(split!) people, with \(tipResult!) tip."
-    }
     
+    }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     
 }

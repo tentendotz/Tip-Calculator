@@ -15,10 +15,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
     
-    var tipTitle = "10%"
-    var tipNumber = 0.10
-    var numberOfPeople = 2
-    var finalResult = "0.0"
+    var calculatorBrain = CalculatorBrain()
     
     @IBAction func tipChanged(_ sender: UIButton) {
         
@@ -29,36 +26,30 @@ class CalculatorViewController: UIViewController {
         twentyPctButton.isSelected = false
         sender.isSelected = true
         
-        tipTitle = sender.currentTitle!
+        calculatorBrain.tipTitle = sender.currentTitle!
         
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         splitNumberLabel.text = String(format: "%.0f", sender.value)
-        numberOfPeople = Int(sender.value)
+        calculatorBrain.numberOfPeople = Int(sender.value)
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         
         let bill = Double(billTextField.text!)
-        
         if let safeBill = bill {
-            let buttonTitleMinusPercentSign = Double(tipTitle.dropLast())!
-            tipNumber = buttonTitleMinusPercentSign / 100
-            let result = safeBill * (1 + tipNumber) / Double(numberOfPeople)
-            finalResult = String(format: "%.2f", result)
-            
+            calculatorBrain.calculateBill(bill: safeBill)
         }
-        
         self.performSegue(withIdentifier: "goToResults", sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResults"{
         let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.result = finalResult
-            destinationVC.tipResult = tipTitle
-            destinationVC.split = numberOfPeople
+            destinationVC.result = calculatorBrain.finalResult
+            destinationVC.tipResult = calculatorBrain.tipTitle
+            destinationVC.split = calculatorBrain.numberOfPeople
         }
     }
 }
